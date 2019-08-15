@@ -51,6 +51,8 @@ Safety first, the host and token are stored in Drone Secrets.
 
 # Parameter Reference
 
+* `branch`: Branch name, Default value `DRONE_BRANCH`.
+* `target`: Target branch, Default value `master`. See [here](https://docs.sonarqube.org/latest/branches/overview/) for more info.
 * `ver`: Code version, Default value `DRONE_BUILD_NUMBER`.
 * `timeout`: Default seconds `60`.
 * `sources`: Comma-separated paths to directories containing source files. 

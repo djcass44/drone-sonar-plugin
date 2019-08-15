@@ -1,6 +1,6 @@
-FROM openjdk:8-jre-alpine
+FROM adoptopenjdk/openjdk8:alpine-jre
 
-ARG SONAR_VERSION=3.3.0.1492
+ARG SONAR_VERSION=4.0.0.1744
 ARG SONAR_SCANNER_CLI=sonar-scanner-cli-${SONAR_VERSION}
 ARG SONAR_SCANNER=sonar-scanner-${SONAR_VERSION}
 

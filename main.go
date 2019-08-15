@@ -39,6 +39,18 @@ func main() {
 
 		// advanced parameters
 		cli.StringFlag{
+			Name:   "branch",
+			Usage:  "Branch name",
+			Value:  "",
+			EnvVar: "PLUGIN_BRANCH_NAME",
+		},
+		cli.StringFlag{
+			Name:   "target",
+			Usage:  "Target branch name",
+			Value:  "",
+			EnvVar: "PLUGIN_BRANCH_TARGET",
+		},
+		cli.StringFlag{
 			Name:   "ver",
 			Usage:  "Project version",
 			EnvVar: "DRONE_BUILD_NUMBER",
@@ -90,6 +102,8 @@ func run(c *cli.Context) {
 			Host:  c.String("host"),
 			Token: c.String("token"),
 
+			Branch:        c.String("branch"),
+			Target:        c.String("target"),
 			Version:       c.String("ver"),
 			Timeout:       c.String("timeout"),
 			Sources:       c.String("sources"),
